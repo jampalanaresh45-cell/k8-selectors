@@ -8,10 +8,10 @@ spec:
       requiredDuringSchedulingIgnoredDuringExecution:
         nodeSelectorTerms:
         - matchExpressions:
-          - key: topology.kubernetes.io/zone
+          - key: disktype
             operator: In
             values:
-            - us-east-1c          
+            - ssd         
   containers:
   - name: nginx
     image: nginx
