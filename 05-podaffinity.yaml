@@ -24,16 +24,7 @@ spec:
             operator: In
             values:
             - pod-1
-          topologyKey: topology.kubernetes.io/zone
-      preferredDuringSchedulingIgnoredDuringExecution:
-      - weight: 100
-        podAffinityTerm:
-          labelSelector:
-            matchExpressions:
-            - key: app
-              operator: In
-              values:
-              - nginx    
+          topologyKey: topology.kubernetes.io/zone   
   containers:
   - name: nginx
     image: nginx
