@@ -12,7 +12,22 @@ spec:
             operator: In
             values:
             - us-east-1b  
-            - us-east-1f      
+            # - us-east-1f
+      preferredDuringSchedulingIgnoredDuringExecution:
+      - weight: 100
+        preference:
+          matchExpressions:
+          - key: topology.kubernetes.io/zone
+            operator: In
+            values:
+            - roboshop
+      - weight: 10
+        preference:
+          matchExpressions:
+          - key: topology.kubernetes.io/zone
+            operator: In
+            values:
+            - amazon       
   containers:
   - name: nginx
     image: nginx
