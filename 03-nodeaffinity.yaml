@@ -12,7 +12,7 @@ spec:
             operator: In
             values:
             - us-east-1b  
-          - key: diskType
+          - key: disktype
             operator: In
             values:
             - ssd      
