@@ -24,7 +24,7 @@ spec:
             operator: In
             values:
             - pod-1
-          topologyKey: kubernetes.io/zone
+          topologyKey: topology.kubernetes.io/zone
       preferredDuringSchedulingIgnoredDuringExecution:
       - weight: 100
         podAffinityTerm:
